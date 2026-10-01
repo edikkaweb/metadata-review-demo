@@ -3,33 +3,33 @@
   "files": [
     {
       "path": "assets/app.mjs",
-      "bytes": 6396,
-      "sha256": "4d146fb74b40e65619caf6c17552800fc355382f5bfc89ff7d4dd5e526a03dc7"
+      "bytes": 8100,
+      "sha256": "5d74ec8b92305b5a9357262a1cdc446be50cb09d7a2709e82c555dbd4b09d0dc"
     },
     {
       "path": "assets/core.mjs",
-      "bytes": 2450,
-      "sha256": "64b800af3ef6fc9272924c071a0283f284516d770e41357df031c0c82a121276"
+      "bytes": 3166,
+      "sha256": "176e86dce3303f9ca544133577945d5bccf47d1a97e62a986d213d43cc5340eb"
     },
     {
       "path": "assets/engine.mjs",
-      "bytes": 11019,
-      "sha256": "6f57e1733fa41a8800870d9a456ffb584aa902dde43dfbc5a02ae0b88af479e4"
+      "bytes": 14404,
+      "sha256": "b3836c5dfec30bac255012a4df03f331905c2acb01e3e80e58e537b17123fefa"
     },
     {
       "path": "assets/render.mjs",
-      "bytes": 28700,
-      "sha256": "2fd39309e7a9c1f1b7d30524eeb344f651e071bd5976c32915233e812c90e75a"
+      "bytes": 31486,
+      "sha256": "ac7011258d7a939dde00480551ec14fccd94d01a2efb91ec1afd374e00c354df"
     },
     {
       "path": "assets/scenarios.mjs",
-      "bytes": 10320,
-      "sha256": "479fd19ebb9abe50a2f20ffdc08be16b9cba6073ebb1e2eee9dd4da52b65c426"
+      "bytes": 13437,
+      "sha256": "d3586f0264dc409a686eab71c5f3b1559a42d0d6f9579b1fe49e99b796f2f239"
     },
     {
       "path": "assets/style.css",
-      "bytes": 8347,
-      "sha256": "11c8beddf62104da3da67f885d6e877efa1b105140f39f15a80690ca4327cd29"
+      "bytes": 10693,
+      "sha256": "cf47a10a04bad009c65013090e0bb57abc1bbfb7f554e75e7ec7132341430566"
     },
     {
       "path": "data/corpus.json",

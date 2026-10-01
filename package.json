@@ -1,1 +1,17 @@
-{"name":"edikka-metadata-review-demo","version":"1.0.0","private":true,"type":"module","engines":{"node":">=22"},"scripts":{"import":"node src/import.mjs","verify":"node src/verify.mjs","build":"node src/build.mjs","test":"node --test tests/*.test.mjs","start":"node src/serve.mjs","replay":"node src/replay.mjs"}}
+{
+  "name": "edikka-metadata-review-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "import": "node src/import.mjs",
+    "verify": "node src/verify.mjs",
+    "build": "node src/build.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "start": "node src/serve.mjs",
+    "replay": "node src/replay.mjs"
+  }
+}
