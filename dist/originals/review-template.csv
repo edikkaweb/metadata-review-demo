@@ -1,0 +1,1 @@
+url,locale,page_type,business_priority,target_intent,generation_mode,contract_version,ruleset_version,prompt_version,provider,model_id,generated_at,source_hash,output_hash,existing_title,existing_description,proposed_title,proposed_description,evidence,machine_flags,reason_code,human_decision,reviewer_role,reviewed_at,manual_lock,stale,rollback_ref,batch_id

@@ -1,0 +1,26 @@
+{
+  "name": "Edikka Metadata Review Kit",
+  "version": "1.0.2",
+  "published": "2026-09-22",
+  "license": "CC BY 4.0",
+  "author": "Bertrand Morel",
+  "publisher": "Edikka",
+  "canonical": "https://www.edikka.com/bibliotheque#instrument-metadata-review-kit",
+  "source": {
+    "fr": "https://www.edikka.com/insights/ia-automatisation-web/automatiser-meta-title-description",
+    "en": "https://www.edikka.com/en/insights/ai-web-automation/automating-meta-titles-descriptions"
+  },
+  "resource_model": {"kit": "DigitalDocument", "corpus": "Dataset", "corpus_id": "https://www.edikka.com/bibliotheque#dataset-metadata-corpus-2026-09-22", "distribution": ["corpus-edikka-2026-09-22.csv"]},
+  "method": "Server HTML extraction; exact comparison and normalised word-bigram Jaccard similarity at 0.72; no AI call and no SEO quality score.",
+  "limits": "Six Edikka pages only. Human decisions remain pending_review. No Google result scraping, Search Console data, acceptance rate, CTR effect or ranking effect.",
+  "files": [
+    {"path":"review-template.csv","encodingFormat":"text/csv","bytes":360,"sha256":"877a128dd9505ec2a828c6795e3cb239f78fd9cf60cb9ce6e4476c523d28d793"},
+    {"path":"serp-observation-template.csv","encodingFormat":"text/csv","bytes":176,"sha256":"339debfe0590d864d2cf02bd27767a0ab0f9344afebcc73c2e7413ca290a3790"},
+    {"path":"search-console-observation-template.csv","encodingFormat":"text/csv","bytes":157,"sha256":"309b95907046522851501c1c5775f66af4015dbfd5f21df9cde6e5412c434fb1"},
+    {"path":"pages.json","encodingFormat":"application/json","bytes":699,"sha256":"fe2b29ab03edb50cba4038c6c389f65e4e1d527bc856c50fda079f96c6525c9e"},
+    {"path":"corpus-edikka-2026-09-22.csv","encodingFormat":"text/csv","bytes":3616,"sha256":"3e7c6f9808a530d6c0a9aadfe9c5e42c25034b840144c5d8616627001ef9336d"},
+    {"path":"extract-metadata-corpus.mjs","encodingFormat":"text/javascript","bytes":4183,"sha256":"40424cd83b9b4cc6fdac9b7388918b44af93aa231b758487802e781f130302f8"},
+    {"path":"README.md","encodingFormat":"text/markdown","bytes":5795,"sha256":"a661051f6eeccb2d2b9fc0a71101c04f1e405f06592b26428d01c1a9134f2f48"},
+    {"path":"LICENSE.txt","encodingFormat":"text/plain","bytes":260,"sha256":"7d3e0730585e2e8812efecf14ade07e5d7055b3fa173a43e977ecd6cf6fed492"}
+  ]
+}

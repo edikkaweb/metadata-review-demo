@@ -1,0 +1,7 @@
+Metadata Review Kit v1.0.0
+
+Copyright 2026 Edikka.
+Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
+https://creativecommons.org/licenses/by/4.0/
+
+Attribution: Edikka — Metadata Review Kit, version 1.0.0, source URL and access date.

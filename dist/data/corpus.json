@@ -1,0 +1,273 @@
+{
+  "manifest": {
+    "name": "Edikka Metadata Review Kit",
+    "version": "1.0.2",
+    "published": "2026-09-22",
+    "license": "CC BY 4.0",
+    "author": "Bertrand Morel",
+    "publisher": "Edikka",
+    "canonical": "https://www.edikka.com/bibliotheque#instrument-metadata-review-kit",
+    "source": {
+      "fr": "https://www.edikka.com/insights/ia-automatisation-web/automatiser-meta-title-description",
+      "en": "https://www.edikka.com/en/insights/ai-web-automation/automating-meta-titles-descriptions"
+    },
+    "resource_model": {
+      "kit": "DigitalDocument",
+      "corpus": "Dataset",
+      "corpus_id": "https://www.edikka.com/bibliotheque#dataset-metadata-corpus-2026-09-22",
+      "distribution": [
+        "corpus-edikka-2026-09-22.csv"
+      ]
+    },
+    "method": "Server HTML extraction; exact comparison and normalised word-bigram Jaccard similarity at 0.72; no AI call and no SEO quality score.",
+    "limits": "Six Edikka pages only. Human decisions remain pending_review. No Google result scraping, Search Console data, acceptance rate, CTR effect or ranking effect.",
+    "files": [
+      {
+        "path": "review-template.csv",
+        "encodingFormat": "text/csv",
+        "bytes": 360,
+        "sha256": "877a128dd9505ec2a828c6795e3cb239f78fd9cf60cb9ce6e4476c523d28d793"
+      },
+      {
+        "path": "serp-observation-template.csv",
+        "encodingFormat": "text/csv",
+        "bytes": 176,
+        "sha256": "339debfe0590d864d2cf02bd27767a0ab0f9344afebcc73c2e7413ca290a3790"
+      },
+      {
+        "path": "search-console-observation-template.csv",
+        "encodingFormat": "text/csv",
+        "bytes": 157,
+        "sha256": "309b95907046522851501c1c5775f66af4015dbfd5f21df9cde6e5412c434fb1"
+      },
+      {
+        "path": "pages.json",
+        "encodingFormat": "application/json",
+        "bytes": 699,
+        "sha256": "fe2b29ab03edb50cba4038c6c389f65e4e1d527bc856c50fda079f96c6525c9e"
+      },
+      {
+        "path": "corpus-edikka-2026-09-22.csv",
+        "encodingFormat": "text/csv",
+        "bytes": 3616,
+        "sha256": "3e7c6f9808a530d6c0a9aadfe9c5e42c25034b840144c5d8616627001ef9336d"
+      },
+      {
+        "path": "extract-metadata-corpus.mjs",
+        "encodingFormat": "text/javascript",
+        "bytes": 4183,
+        "sha256": "40424cd83b9b4cc6fdac9b7388918b44af93aa231b758487802e781f130302f8"
+      },
+      {
+        "path": "README.md",
+        "encodingFormat": "text/markdown",
+        "bytes": 5795,
+        "sha256": "a661051f6eeccb2d2b9fc0a71101c04f1e405f06592b26428d01c1a9134f2f48"
+      },
+      {
+        "path": "LICENSE.txt",
+        "encodingFormat": "text/plain",
+        "bytes": 260,
+        "sha256": "7d3e0730585e2e8812efecf14ade07e5d7055b3fa173a43e977ecd6cf6fed492"
+      }
+    ]
+  },
+  "provenance": {
+    "importedAt": "2026-10-01T13:14:50.504Z",
+    "kit": "1.0.2",
+    "observedAt": "2026-09-22",
+    "base": "https://www.edikka.com/docbd/data/metadata-review-kit-v1/",
+    "manifestSha256": "6092230ae392c364ecff45d9df2ff64bd59bcf571e836618687e80c7ec6a6f03",
+    "contract": {
+      "url": "https://www.edikka.com/docbd/data/automatisation-seo-ia-recommandations.schema.json",
+      "sha256": "ab5e907d58aa1e800c4449401a29853ec943067b5acb8d45902a6f8354830c16",
+      "bytes": 3010
+    },
+    "files": [
+      {
+        "path": "review-template.csv",
+        "encodingFormat": "text/csv",
+        "bytes": 360,
+        "sha256": "877a128dd9505ec2a828c6795e3cb239f78fd9cf60cb9ce6e4476c523d28d793",
+        "url": "https://www.edikka.com/docbd/data/metadata-review-kit-v1/review-template.csv"
+      },
+      {
+        "path": "serp-observation-template.csv",
+        "encodingFormat": "text/csv",
+        "bytes": 176,
+        "sha256": "339debfe0590d864d2cf02bd27767a0ab0f9344afebcc73c2e7413ca290a3790",
+        "url": "https://www.edikka.com/docbd/data/metadata-review-kit-v1/serp-observation-template.csv"
+      },
+      {
+        "path": "search-console-observation-template.csv",
+        "encodingFormat": "text/csv",
+        "bytes": 157,
+        "sha256": "309b95907046522851501c1c5775f66af4015dbfd5f21df9cde6e5412c434fb1",
+        "url": "https://www.edikka.com/docbd/data/metadata-review-kit-v1/search-console-observation-template.csv"
+      },
+      {
+        "path": "pages.json",
+        "encodingFormat": "application/json",
+        "bytes": 699,
+        "sha256": "fe2b29ab03edb50cba4038c6c389f65e4e1d527bc856c50fda079f96c6525c9e",
+        "url": "https://www.edikka.com/docbd/data/metadata-review-kit-v1/pages.json"
+      },
+      {
+        "path": "corpus-edikka-2026-09-22.csv",
+        "encodingFormat": "text/csv",
+        "bytes": 3616,
+        "sha256": "3e7c6f9808a530d6c0a9aadfe9c5e42c25034b840144c5d8616627001ef9336d",
+        "url": "https://www.edikka.com/docbd/data/metadata-review-kit-v1/corpus-edikka-2026-09-22.csv"
+      },
+      {
+        "path": "extract-metadata-corpus.mjs",
+        "encodingFormat": "text/javascript",
+        "bytes": 4183,
+        "sha256": "40424cd83b9b4cc6fdac9b7388918b44af93aa231b758487802e781f130302f8",
+        "url": "https://www.edikka.com/docbd/data/metadata-review-kit-v1/extract-metadata-corpus.mjs"
+      },
+      {
+        "path": "README.md",
+        "encodingFormat": "text/markdown",
+        "bytes": 5795,
+        "sha256": "a661051f6eeccb2d2b9fc0a71101c04f1e405f06592b26428d01c1a9134f2f48",
+        "url": "https://www.edikka.com/docbd/data/metadata-review-kit-v1/README.md"
+      },
+      {
+        "path": "LICENSE.txt",
+        "encodingFormat": "text/plain",
+        "bytes": 260,
+        "sha256": "7d3e0730585e2e8812efecf14ade07e5d7055b3fa173a43e977ecd6cf6fed492",
+        "url": "https://www.edikka.com/docbd/data/metadata-review-kit-v1/LICENSE.txt"
+      }
+    ]
+  },
+  "rows": [
+    {
+      "url": "https://www.edikka.com/insights/ia-automatisation-web/automatiser-meta-title-description",
+      "locale": "fr",
+      "page_type": "article",
+      "title": "Automatiser les meta titles et descriptions sans perdre le contrôle",
+      "description": "Découvrez comment automatiser la génération de meta titles et descriptions avec l’IA tout en gardant une stratégie SEO cohérente et maîtrisée.",
+      "h1": "Automatiser la génération de meta titles et descriptions sans perdre le contrôle",
+      "canonical": "https://www.edikka.com/insights/ia-automatisation-web/automatiser-meta-title-description",
+      "title_length": "67",
+      "description_length": "142",
+      "source_hash": "sha256:9ea0eceda6cd68145c2f47d498f0754b3ab5e8308c778cbb49acadc472609b18",
+      "exact_title_duplicates": "",
+      "near_title_duplicates": "",
+      "similarity_method": "word_bigram_jaccard_0.72",
+      "human_decision": "pending_review"
+    },
+    {
+      "url": "https://www.edikka.com/en/insights/ai-web-automation/automating-meta-titles-descriptions",
+      "locale": "en",
+      "page_type": "article",
+      "title": "Automating meta titles and descriptions without losing control",
+      "description": "Learn how to automate meta title and description generation with AI while keeping a coherent and controlled SEO strategy.",
+      "h1": "Automating meta titles and descriptions without losing control",
+      "canonical": "https://www.edikka.com/en/insights/ai-web-automation/automating-meta-titles-descriptions",
+      "title_length": "62",
+      "description_length": "121",
+      "source_hash": "sha256:158afdacff9048629478e265fa477aa06225417fc6b9cf3be840b1f8520a6fa0",
+      "exact_title_duplicates": "",
+      "near_title_duplicates": "",
+      "similarity_method": "word_bigram_jaccard_0.72",
+      "human_decision": "pending_review"
+    },
+    {
+      "url": "https://www.edikka.com/insights/ia-automatisation-web/automatisation-seo-ia",
+      "locale": "fr",
+      "page_type": "article",
+      "title": "Automatisation SEO par IA : gagner du temps sans perdre la qualité",
+      "description": "Découvrez comment automatiser certaines tâches SEO avec l’IA tout en gardant une stratégie claire, un contrôle éditorial et des contenus utiles.",
+      "h1": "Automatisation SEO par IA : gagner du temps sans perdre la qualité éditoriale",
+      "canonical": "https://www.edikka.com/insights/ia-automatisation-web/automatisation-seo-ia",
+      "title_length": "66",
+      "description_length": "144",
+      "source_hash": "sha256:0830ecb678164b042128d9586892311f2a459a6b1708c007df62a3cfe3504383",
+      "exact_title_duplicates": "",
+      "near_title_duplicates": "",
+      "similarity_method": "word_bigram_jaccard_0.72",
+      "human_decision": "pending_review"
+    },
+    {
+      "url": "https://www.edikka.com/en/insights/ai-web-automation/ai-seo-automation",
+      "locale": "en",
+      "page_type": "article",
+      "title": "AI SEO automation: saving time without losing quality",
+      "description": "Learn how to automate SEO tasks with AI while keeping a clear strategy, editorial control and genuinely useful content.",
+      "h1": "AI SEO automation: saving time without losing editorial quality",
+      "canonical": "https://www.edikka.com/en/insights/ai-web-automation/ai-seo-automation",
+      "title_length": "53",
+      "description_length": "119",
+      "source_hash": "sha256:b31ed0762016da027902e3ee6c3e1143025c192f4f3e3e942fcc0be13bea98d7",
+      "exact_title_duplicates": "",
+      "near_title_duplicates": "",
+      "similarity_method": "word_bigram_jaccard_0.72",
+      "human_decision": "pending_review"
+    },
+    {
+      "url": "https://www.edikka.com/expertise/seo",
+      "locale": "fr",
+      "page_type": "service",
+      "title": "Agence SEO & GEO à Paris, référencement naturel et visibilité IA | Edikka",
+      "description": "Edikka accompagne votre SEO et votre visibilité IA : audit, architecture, contenus, données structurées, GEO, performance, preuves vérifiables et conversion.",
+      "h1": "Agence SEO & GEO à Paris pour rendre votre site visible, rapide et citable par les IA",
+      "canonical": "https://www.edikka.com/expertise/seo",
+      "title_length": "73",
+      "description_length": "157",
+      "source_hash": "sha256:e6cfc84445d966b3bc00976f9235660c1f9e780f12543c8ddebf3f1757169c80",
+      "exact_title_duplicates": "",
+      "near_title_duplicates": "",
+      "similarity_method": "word_bigram_jaccard_0.72",
+      "human_decision": "pending_review"
+    },
+    {
+      "url": "https://www.edikka.com/en/expertise/seo",
+      "locale": "en",
+      "page_type": "service",
+      "title": "SEO & GEO Agency in Paris, France | Edikka",
+      "description": "Edikka combines technical SEO, content architecture, structured data, GEO and verifiable evidence to grow search and AI visibility in France and Europe.",
+      "h1": "SEO & GEO agency in Paris, France, for Google and AI visibility",
+      "canonical": "https://www.edikka.com/en/expertise/seo",
+      "title_length": "42",
+      "description_length": "152",
+      "source_hash": "sha256:93491a711d03f30eb2842ddbab134ea683d53aae30c7700545ac600d6565c287",
+      "exact_title_duplicates": "",
+      "near_title_duplicates": "",
+      "similarity_method": "word_bigram_jaccard_0.72",
+      "human_decision": "pending_review"
+    }
+  ],
+  "reviewColumns": [
+    "url",
+    "locale",
+    "page_type",
+    "business_priority",
+    "target_intent",
+    "generation_mode",
+    "contract_version",
+    "ruleset_version",
+    "prompt_version",
+    "provider",
+    "model_id",
+    "generated_at",
+    "source_hash",
+    "output_hash",
+    "existing_title",
+    "existing_description",
+    "proposed_title",
+    "proposed_description",
+    "evidence",
+    "machine_flags",
+    "reason_code",
+    "human_decision",
+    "reviewer_role",
+    "reviewed_at",
+    "manual_lock",
+    "stale",
+    "rollback_ref",
+    "batch_id"
+  ]
+}

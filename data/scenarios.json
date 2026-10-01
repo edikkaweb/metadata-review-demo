@@ -1,0 +1,834 @@
+{
+  "fr": [
+    {
+      "version": "1.0.0",
+      "locale": "fr",
+      "company": "Atelier Orbe",
+      "fictional": true,
+      "url": "https://atelier-orbe.example/audit-web",
+      "existing": {
+        "title": "Audit web : méthode et livrables | Atelier Orbe",
+        "description": "Découvrez le périmètre de l’audit web : analyse technique, rapport et restitution."
+      },
+      "sources": {
+        "base": {
+          "id": "base",
+          "text": "Atelier Orbe réalise un audit web. La prestation comprend une analyse technique, un rapport priorisé et une réunion de restitution.",
+          "facts": {
+            "free": null,
+            "deliveryHours": null
+          },
+          "unknown": [
+            "Tarif non documenté",
+            "Délai non documenté"
+          ]
+        },
+        "free": {
+          "id": "free",
+          "text": "Atelier Orbe réalise un audit web. La prestation comprend une analyse technique, un rapport priorisé et une réunion de restitution. Cet audit est gratuit. Aucun délai de livraison n’est annoncé.",
+          "facts": {
+            "free": true,
+            "deliveryHours": null
+          },
+          "unknown": [
+            "Délai non documenté"
+          ]
+        },
+        "paid": {
+          "id": "paid",
+          "text": "Atelier Orbe réalise un audit web. La prestation comprend une analyse technique, un rapport priorisé et une réunion de restitution. Cet audit est non gratuit : un devis est requis.",
+          "facts": {
+            "free": false,
+            "deliveryHours": null
+          },
+          "unknown": [
+            "Délai non documenté"
+          ]
+        }
+      },
+      "defaultSource": "base",
+      "proposals": {
+        "initial": {
+          "title": "Audit gratuit en 24 h | Atelier Orbe",
+          "description": "Recevez gratuitement votre audit web complet sous 24 h, avec rapport et restitution.",
+          "claims": {
+            "title": [
+              {
+                "fact": "free",
+                "value": true,
+                "term": "gratuit"
+              },
+              {
+                "fact": "deliveryHours",
+                "value": 24,
+                "term": "24 h"
+              }
+            ],
+            "description": [
+              {
+                "fact": "free",
+                "value": true,
+                "term": "gratuitement"
+              },
+              {
+                "fact": "deliveryHours",
+                "value": 24,
+                "term": "24 h"
+              }
+            ]
+          }
+        },
+        "corrected": {
+          "title": "Audit web : méthode et livrables | Atelier Orbe",
+          "description": "Découvrez le périmètre de l’audit web : analyse technique, rapport et restitution.",
+          "claims": {
+            "title": [],
+            "description": []
+          }
+        },
+        "free": {
+          "title": "Audit web gratuit | Atelier Orbe",
+          "description": "Un audit web gratuit avec analyse technique, rapport priorisé et restitution.",
+          "claims": {
+            "title": [
+              {
+                "fact": "free",
+                "value": true,
+                "term": "gratuit"
+              }
+            ],
+            "description": [
+              {
+                "fact": "free",
+                "value": true,
+                "term": "gratuit"
+              }
+            ]
+          }
+        }
+      },
+      "defaultProposal": "initial",
+      "initialApproval": false,
+      "locked": false,
+      "id": "promise",
+      "label": "Promesse sans preuve",
+      "summary": "« Gratuit » et « 24 h » : que peut-on réellement établir ?",
+      "explanation": "Dans le cas initial, la source ne documente ni le tarif ni le délai. Cela rend la promesse non étayée dans les preuves disponibles, sans prouver qu’elle est fausse. Essayez la correction, puis la variante qui documente la gratuité.",
+      "expected": {
+        "controls": [
+          "claim_unverified"
+        ],
+        "action": "human_review_required"
+      }
+    },
+    {
+      "version": "1.0.0",
+      "locale": "fr",
+      "company": "Atelier Orbe",
+      "fictional": true,
+      "url": "https://atelier-orbe.example/audit-web",
+      "existing": {
+        "title": "Audit web : méthode et livrables | Atelier Orbe",
+        "description": "Découvrez le périmètre de l’audit web : analyse technique, rapport et restitution."
+      },
+      "sources": {
+        "base": {
+          "id": "base",
+          "text": "Atelier Orbe réalise un audit web. La prestation comprend une analyse technique, un rapport priorisé et une réunion de restitution.",
+          "facts": {
+            "free": null,
+            "deliveryHours": null
+          },
+          "unknown": [
+            "Tarif non documenté",
+            "Délai non documenté"
+          ],
+          "otherPages": [
+            {
+              "url": "https://atelier-orbe.example/audit-web-lyon",
+              "title": "Audit web : méthode et livrables | Atelier Orbe Lyon",
+              "intent": "Audit sur place à Lyon",
+              "content": "À Lyon, la réunion de restitution a lieu dans les locaux du client. La page nationale présente la prestation à distance."
+            }
+          ]
+        },
+        "overlap": {
+          "id": "overlap",
+          "text": "Atelier Orbe réalise un audit web. La prestation comprend une analyse technique, un rapport priorisé et une réunion de restitution.",
+          "facts": {
+            "free": null,
+            "deliveryHours": null
+          },
+          "unknown": [
+            "Tarif non documenté",
+            "Délai non documenté"
+          ],
+          "otherPages": [
+            {
+              "url": "https://atelier-orbe.example/audit-web-lyon",
+              "title": "Audit web : méthode et livrables | Atelier Orbe Lyon",
+              "intent": "Même audit distant, même public",
+              "content": "La seconde page reprend la même prestation à distance. Aucune différence de public ni de livrable n’est documentée."
+            }
+          ]
+        }
+      },
+      "defaultSource": "base",
+      "proposals": {
+        "initial": {
+          "title": "Audit web : méthode et livrables | Atelier Orbe",
+          "description": "Découvrez le périmètre de l’audit web : analyse technique, rapport et restitution.",
+          "claims": {
+            "title": [],
+            "description": []
+          }
+        },
+        "corrected": {
+          "title": "Audit web à distance : méthode et livrables | Atelier Orbe",
+          "description": "Découvrez le périmètre de l’audit web : analyse technique, rapport et restitution.",
+          "claims": {
+            "title": [],
+            "description": []
+          }
+        }
+      },
+      "defaultProposal": "initial",
+      "initialApproval": false,
+      "locked": false,
+      "id": "similar",
+      "label": "Titres proches",
+      "summary": "Même vocabulaire, même intention ?",
+      "explanation": "La proximité des titres est calculée. Dans la variante initiale, le mode de restitution distingue les pages ; dans l’autre, cette distinction n’est pas documentée. La similarité seule ne démontre jamais une cannibalisation.",
+      "expected": {
+        "controls": [
+          "title_similarity"
+        ],
+        "action": "human_review_required"
+      }
+    },
+    {
+      "version": "1.0.0",
+      "locale": "fr",
+      "company": "Atelier Orbe",
+      "fictional": true,
+      "url": "https://atelier-orbe.example/audit-web",
+      "existing": {
+        "title": "Audit web : méthode et livrables | Atelier Orbe",
+        "description": "Découvrez le périmètre de l’audit web : analyse technique, rapport et restitution."
+      },
+      "sources": {
+        "base": {
+          "id": "base",
+          "text": "Atelier Orbe réalise un audit web. La prestation comprend une analyse technique, un rapport priorisé et une réunion de restitution.",
+          "facts": {
+            "free": null,
+            "deliveryHours": null
+          },
+          "unknown": [
+            "Tarif non documenté",
+            "Délai non documenté"
+          ]
+        }
+      },
+      "defaultSource": "base",
+      "proposals": {
+        "initial": {
+          "title": "Audit de votre site web | Atelier Orbe",
+          "description": "Découvrez le périmètre de l’audit web : analyse technique, rapport et restitution.",
+          "claims": {
+            "title": [],
+            "description": []
+          }
+        },
+        "corrected": {
+          "title": "Audit web : méthode et livrables | Atelier Orbe",
+          "description": "Découvrez le périmètre de l’audit web : analyse technique, rapport et restitution.",
+          "claims": {
+            "title": [],
+            "description": []
+          }
+        }
+      },
+      "defaultProposal": "initial",
+      "initialApproval": false,
+      "locked": true,
+      "id": "locked",
+      "label": "Valeur verrouillée",
+      "summary": "Une nouvelle proposition ne remplace pas un verrou.",
+      "protectedFixture": true,
+      "explanation": "La valeur existante a été validée puis verrouillée dans cette fiction. Le bouton d’application conserve cette valeur. Lever le verrou est une action distincte, motivée ; la proposition demande encore une revue.",
+      "expected": {
+        "controls": [
+          "manual_lock"
+        ],
+        "action": "locked_preserved"
+      }
+    },
+    {
+      "version": "1.0.0",
+      "locale": "fr",
+      "company": "Atelier Orbe",
+      "fictional": true,
+      "url": "https://atelier-orbe.example/audit-web",
+      "existing": {
+        "title": "Audit gratuit : rapport sous 24 h après accès | Atelier Orbe",
+        "description": "Un audit web gratuit ; rapport sous 24 heures après réception des accès, puis réunion de restitution."
+      },
+      "sources": {
+        "base": {
+          "id": "base",
+          "text": "Atelier Orbe réalise un audit web. La prestation comprend une analyse technique, un rapport priorisé et une réunion de restitution. Cet audit est gratuit. Le rapport est livré sous 24 heures après réception des accès.",
+          "facts": {
+            "free": true,
+            "deliveryHours": 24
+          },
+          "unknown": [],
+          "condition": "Après réception des accès"
+        },
+        "material": {
+          "id": "material",
+          "text": "Atelier Orbe réalise un audit web. La prestation comprend une analyse technique, un rapport priorisé et une réunion de restitution. L’audit est désormais payant et le rapport est livré sous 72 heures après réception des accès.",
+          "facts": {
+            "free": false,
+            "deliveryHours": 72
+          },
+          "unknown": [],
+          "condition": "Après réception des accès"
+        },
+        "cosmetic": {
+          "id": "cosmetic",
+          "text": "Atelier Orbe réalise un audit web. La prestation comprend une analyse technique, un rapport priorisé et une réunion de restitution. Cet audit est gratuit. Le rapport est livré sous 24 heures après réception des accès. La réunion de restitution est aussi appelée réunion de synthèse.",
+          "facts": {
+            "free": true,
+            "deliveryHours": 24
+          },
+          "unknown": [],
+          "condition": "Après réception des accès"
+        }
+      },
+      "defaultSource": "base",
+      "proposals": {
+        "initial": {
+          "title": "Audit gratuit : rapport sous 24 h après accès | Atelier Orbe",
+          "description": "Un audit web gratuit ; rapport sous 24 heures après réception des accès, puis réunion de restitution.",
+          "claims": {
+            "title": [
+              {
+                "fact": "free",
+                "value": true,
+                "term": "gratuit"
+              },
+              {
+                "fact": "deliveryHours",
+                "value": 24,
+                "term": "24 h après accès"
+              }
+            ],
+            "description": [
+              {
+                "fact": "free",
+                "value": true,
+                "term": "gratuit"
+              },
+              {
+                "fact": "deliveryHours",
+                "value": 24,
+                "term": "24 heures après réception des accès"
+              }
+            ]
+          }
+        },
+        "corrected": {
+          "title": "Audit web : méthode et livrables | Atelier Orbe",
+          "description": "Découvrez le périmètre de l’audit web : analyse technique, rapport et restitution.",
+          "claims": {
+            "title": [],
+            "description": []
+          }
+        }
+      },
+      "defaultProposal": "initial",
+      "initialApproval": true,
+      "locked": false,
+      "id": "changed",
+      "label": "Preuve modifiée",
+      "summary": "Une décision est liée à ce qui a été examiné.",
+      "explanation": "L’approbation initiale est une donnée de scénario, sans auteur réel. Une nouvelle empreinte exige un réexamen. La variante matérielle contredit les promesses ; la variante de vocabulaire ne les contredit pas. Dans les deux cas, l’ancienne approbation ne couvre pas les nouvelles preuves.",
+      "expected": {
+        "controls": [],
+        "action": "no_change"
+      }
+    },
+    {
+      "version": "1.0.0",
+      "locale": "fr",
+      "company": "Atelier Orbe",
+      "fictional": true,
+      "url": "https://atelier-orbe.example/audit-web",
+      "existing": {
+        "title": "Audit web : méthode et livrables | Atelier Orbe",
+        "description": "Découvrez le périmètre de l’audit web : analyse technique, rapport et restitution."
+      },
+      "sources": {
+        "base": {
+          "id": "base",
+          "text": "Atelier Orbe réalise un audit web. La prestation comprend une analyse technique, un rapport priorisé et une réunion de restitution.",
+          "facts": {
+            "free": null,
+            "deliveryHours": null
+          },
+          "unknown": [
+            "Tarif non documenté",
+            "Délai non documenté"
+          ]
+        }
+      },
+      "defaultSource": "base",
+      "proposals": {
+        "initial": {
+          "title": "Audit web : méthode et livrables | Atelier Orbe",
+          "description": "Découvrez le périmètre de l’audit web : analyse technique, rapport et restitution.",
+          "claims": {
+            "title": [],
+            "description": []
+          }
+        },
+        "corrected": {
+          "title": "Audit web : méthode et livrables | Atelier Orbe",
+          "description": "Découvrez le périmètre de l’audit web : analyse technique, rapport et restitution.",
+          "claims": {
+            "title": [],
+            "description": []
+          }
+        }
+      },
+      "defaultProposal": "initial",
+      "initialApproval": true,
+      "locked": false,
+      "id": "unchanged",
+      "label": "Rien à changer",
+      "summary": "Rejouer n’est pas créer une nouvelle version.",
+      "explanation": "Les preuves, les valeurs et les règles sont inchangées. L’approbation fictive correspond à cette combinaison. Rejouer conserve la valeur et renvoie no_change, sans incrément de version éditoriale.",
+      "expected": {
+        "controls": [],
+        "action": "no_change"
+      }
+    }
+  ],
+  "en": [
+    {
+      "version": "1.0.0",
+      "locale": "en",
+      "company": "Atelier Orbe",
+      "fictional": true,
+      "url": "https://atelier-orbe.example/audit-web",
+      "existing": {
+        "title": "Web audit: method and deliverables | Atelier Orbe",
+        "description": "Explore the web audit scope: technical analysis, report and review meeting."
+      },
+      "sources": {
+        "base": {
+          "id": "base",
+          "text": "Atelier Orbe provides a web audit. The service includes a technical analysis, a prioritised report and a review meeting.",
+          "facts": {
+            "free": null,
+            "deliveryHours": null
+          },
+          "unknown": [
+            "Price not documented",
+            "Delivery time not documented"
+          ]
+        },
+        "free": {
+          "id": "free",
+          "text": "Atelier Orbe provides a web audit. The service includes a technical analysis, a prioritised report and a review meeting. This audit is free. No delivery time is stated.",
+          "facts": {
+            "free": true,
+            "deliveryHours": null
+          },
+          "unknown": [
+            "Delivery time not documented"
+          ]
+        },
+        "paid": {
+          "id": "paid",
+          "text": "Atelier Orbe provides a web audit. The service includes a technical analysis, a prioritised report and a review meeting. This audit is not free: a quote is required.",
+          "facts": {
+            "free": false,
+            "deliveryHours": null
+          },
+          "unknown": [
+            "Delivery time not documented"
+          ]
+        }
+      },
+      "defaultSource": "base",
+      "proposals": {
+        "initial": {
+          "title": "Free audit in 24 hours | Atelier Orbe",
+          "description": "Get your complete web audit free within 24 hours, with a report and review meeting.",
+          "claims": {
+            "title": [
+              {
+                "fact": "free",
+                "value": true,
+                "term": "Free"
+              },
+              {
+                "fact": "deliveryHours",
+                "value": 24,
+                "term": "24 hours"
+              }
+            ],
+            "description": [
+              {
+                "fact": "free",
+                "value": true,
+                "term": "free"
+              },
+              {
+                "fact": "deliveryHours",
+                "value": 24,
+                "term": "24 hours"
+              }
+            ]
+          }
+        },
+        "corrected": {
+          "title": "Web audit: method and deliverables | Atelier Orbe",
+          "description": "Explore the web audit scope: technical analysis, report and review meeting.",
+          "claims": {
+            "title": [],
+            "description": []
+          }
+        },
+        "free": {
+          "title": "Free web audit | Atelier Orbe",
+          "description": "A free web audit with technical analysis, a prioritised report and a review meeting.",
+          "claims": {
+            "title": [
+              {
+                "fact": "free",
+                "value": true,
+                "term": "Free"
+              }
+            ],
+            "description": [
+              {
+                "fact": "free",
+                "value": true,
+                "term": "free"
+              }
+            ]
+          }
+        }
+      },
+      "defaultProposal": "initial",
+      "initialApproval": false,
+      "locked": false,
+      "id": "promise",
+      "label": "Unsupported promise",
+      "summary": "“Free” and “24 hours”: what can we actually establish?",
+      "explanation": "In the initial case, neither price nor delivery time is documented. The claim is unsupported by the available evidence, which does not prove it false. Try the correction, then the source variant documenting the free service.",
+      "expected": {
+        "controls": [
+          "claim_unverified"
+        ],
+        "action": "human_review_required"
+      }
+    },
+    {
+      "version": "1.0.0",
+      "locale": "en",
+      "company": "Atelier Orbe",
+      "fictional": true,
+      "url": "https://atelier-orbe.example/audit-web",
+      "existing": {
+        "title": "Web audit: method and deliverables | Atelier Orbe",
+        "description": "Explore the web audit scope: technical analysis, report and review meeting."
+      },
+      "sources": {
+        "base": {
+          "id": "base",
+          "text": "Atelier Orbe provides a web audit. The service includes a technical analysis, a prioritised report and a review meeting.",
+          "facts": {
+            "free": null,
+            "deliveryHours": null
+          },
+          "unknown": [
+            "Price not documented",
+            "Delivery time not documented"
+          ],
+          "otherPages": [
+            {
+              "url": "https://atelier-orbe.example/audit-web-lyon",
+              "title": "Web audit: method and deliverables | Atelier Orbe Lyon",
+              "intent": "On-site audit in Lyon",
+              "content": "In Lyon, the review meeting takes place at the client’s office. The national page describes the remote service."
+            }
+          ]
+        },
+        "overlap": {
+          "id": "overlap",
+          "text": "Atelier Orbe provides a web audit. The service includes a technical analysis, a prioritised report and a review meeting.",
+          "facts": {
+            "free": null,
+            "deliveryHours": null
+          },
+          "unknown": [
+            "Price not documented",
+            "Delivery time not documented"
+          ],
+          "otherPages": [
+            {
+              "url": "https://atelier-orbe.example/audit-web-lyon",
+              "title": "Web audit: method and deliverables | Atelier Orbe Lyon",
+              "intent": "Same remote audit, same audience",
+              "content": "The second page repeats the same remote service. No audience or deliverable difference is documented."
+            }
+          ]
+        }
+      },
+      "defaultSource": "base",
+      "proposals": {
+        "initial": {
+          "title": "Web audit: method and deliverables | Atelier Orbe",
+          "description": "Explore the web audit scope: technical analysis, report and review meeting.",
+          "claims": {
+            "title": [],
+            "description": []
+          }
+        },
+        "corrected": {
+          "title": "Remote web audit: method and deliverables | Atelier Orbe",
+          "description": "Explore the web audit scope: technical analysis, report and review meeting.",
+          "claims": {
+            "title": [],
+            "description": []
+          }
+        }
+      },
+      "defaultProposal": "initial",
+      "initialApproval": false,
+      "locked": false,
+      "id": "similar",
+      "label": "Similar titles",
+      "summary": "Similar wording, same intent?",
+      "explanation": "Title similarity is calculated. In the initial variant, the review format distinguishes the pages; in the alternative, this distinction is undocumented. Similarity alone never establishes cannibalisation.",
+      "expected": {
+        "controls": [
+          "title_similarity"
+        ],
+        "action": "human_review_required"
+      }
+    },
+    {
+      "version": "1.0.0",
+      "locale": "en",
+      "company": "Atelier Orbe",
+      "fictional": true,
+      "url": "https://atelier-orbe.example/audit-web",
+      "existing": {
+        "title": "Web audit: method and deliverables | Atelier Orbe",
+        "description": "Explore the web audit scope: technical analysis, report and review meeting."
+      },
+      "sources": {
+        "base": {
+          "id": "base",
+          "text": "Atelier Orbe provides a web audit. The service includes a technical analysis, a prioritised report and a review meeting.",
+          "facts": {
+            "free": null,
+            "deliveryHours": null
+          },
+          "unknown": [
+            "Price not documented",
+            "Delivery time not documented"
+          ]
+        }
+      },
+      "defaultSource": "base",
+      "proposals": {
+        "initial": {
+          "title": "Your website audit | Atelier Orbe",
+          "description": "Explore the web audit scope: technical analysis, report and review meeting.",
+          "claims": {
+            "title": [],
+            "description": []
+          }
+        },
+        "corrected": {
+          "title": "Web audit: method and deliverables | Atelier Orbe",
+          "description": "Explore the web audit scope: technical analysis, report and review meeting.",
+          "claims": {
+            "title": [],
+            "description": []
+          }
+        }
+      },
+      "defaultProposal": "initial",
+      "initialApproval": false,
+      "locked": true,
+      "id": "locked",
+      "label": "Locked value",
+      "summary": "A new proposal does not override a lock.",
+      "protectedFixture": true,
+      "explanation": "The existing value was approved and locked within this fiction. Applying the proposal preserves that value. Unlocking is a separate, reasoned action; the proposal still requires review.",
+      "expected": {
+        "controls": [
+          "manual_lock"
+        ],
+        "action": "locked_preserved"
+      }
+    },
+    {
+      "version": "1.0.0",
+      "locale": "en",
+      "company": "Atelier Orbe",
+      "fictional": true,
+      "url": "https://atelier-orbe.example/audit-web",
+      "existing": {
+        "title": "Free audit: report within 24 hours of access | Atelier Orbe",
+        "description": "A free web audit; report within 24 hours after access is received, followed by a review meeting."
+      },
+      "sources": {
+        "base": {
+          "id": "base",
+          "text": "Atelier Orbe provides a web audit. The service includes a technical analysis, a prioritised report and a review meeting. This audit is free. The report is delivered within 24 hours after access is received.",
+          "facts": {
+            "free": true,
+            "deliveryHours": 24
+          },
+          "unknown": [],
+          "condition": "After access is received"
+        },
+        "material": {
+          "id": "material",
+          "text": "Atelier Orbe provides a web audit. The service includes a technical analysis, a prioritised report and a review meeting. The audit now has a fee and the report is delivered within 72 hours after access is received.",
+          "facts": {
+            "free": false,
+            "deliveryHours": 72
+          },
+          "unknown": [],
+          "condition": "After access is received"
+        },
+        "cosmetic": {
+          "id": "cosmetic",
+          "text": "Atelier Orbe provides a web audit. The service includes a technical analysis, a prioritised report and a review meeting. This audit is free. The report is delivered within 24 hours after access is received. The review meeting is also called a summary meeting.",
+          "facts": {
+            "free": true,
+            "deliveryHours": 24
+          },
+          "unknown": [],
+          "condition": "After access is received"
+        }
+      },
+      "defaultSource": "base",
+      "proposals": {
+        "initial": {
+          "title": "Free audit: report within 24 hours of access | Atelier Orbe",
+          "description": "A free web audit; report within 24 hours after access is received, followed by a review meeting.",
+          "claims": {
+            "title": [
+              {
+                "fact": "free",
+                "value": true,
+                "term": "Free"
+              },
+              {
+                "fact": "deliveryHours",
+                "value": 24,
+                "term": "24 hours of access"
+              }
+            ],
+            "description": [
+              {
+                "fact": "free",
+                "value": true,
+                "term": "free"
+              },
+              {
+                "fact": "deliveryHours",
+                "value": 24,
+                "term": "24 hours after access is received"
+              }
+            ]
+          }
+        },
+        "corrected": {
+          "title": "Web audit: method and deliverables | Atelier Orbe",
+          "description": "Explore the web audit scope: technical analysis, report and review meeting.",
+          "claims": {
+            "title": [],
+            "description": []
+          }
+        }
+      },
+      "defaultProposal": "initial",
+      "initialApproval": true,
+      "locked": false,
+      "id": "changed",
+      "label": "Changed evidence",
+      "summary": "A decision is bound to what was reviewed.",
+      "explanation": "The initial approval is scenario data with no real reviewer. A new fingerprint requires review. The material variant contradicts the claims; the wording variant does not. In both cases, the old approval does not cover the new evidence.",
+      "expected": {
+        "controls": [],
+        "action": "no_change"
+      }
+    },
+    {
+      "version": "1.0.0",
+      "locale": "en",
+      "company": "Atelier Orbe",
+      "fictional": true,
+      "url": "https://atelier-orbe.example/audit-web",
+      "existing": {
+        "title": "Web audit: method and deliverables | Atelier Orbe",
+        "description": "Explore the web audit scope: technical analysis, report and review meeting."
+      },
+      "sources": {
+        "base": {
+          "id": "base",
+          "text": "Atelier Orbe provides a web audit. The service includes a technical analysis, a prioritised report and a review meeting.",
+          "facts": {
+            "free": null,
+            "deliveryHours": null
+          },
+          "unknown": [
+            "Price not documented",
+            "Delivery time not documented"
+          ]
+        }
+      },
+      "defaultSource": "base",
+      "proposals": {
+        "initial": {
+          "title": "Web audit: method and deliverables | Atelier Orbe",
+          "description": "Explore the web audit scope: technical analysis, report and review meeting.",
+          "claims": {
+            "title": [],
+            "description": []
+          }
+        },
+        "corrected": {
+          "title": "Web audit: method and deliverables | Atelier Orbe",
+          "description": "Explore the web audit scope: technical analysis, report and review meeting.",
+          "claims": {
+            "title": [],
+            "description": []
+          }
+        }
+      },
+      "defaultProposal": "initial",
+      "initialApproval": true,
+      "locked": false,
+      "id": "unchanged",
+      "label": "No change needed",
+      "summary": "Replaying does not create a new version.",
+      "explanation": "Evidence, values and rules are unchanged. The fictional approval matches this combination. Replaying preserves the value and returns no_change without incrementing the editorial version.",
+      "expected": {
+        "controls": [],
+        "action": "no_change"
+      }
+    }
+  ]
+}

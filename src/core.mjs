@@ -1,0 +1,12 @@
+export const VERSIONS=Object.freeze({demo:'1.0.0',rules:'1.0.0',kit:'1.0.2',session:'edikka-metadata-simulation/1.0.0'});
+export const clone=x=>structuredClone(x);
+export function canonical(x){if(Array.isArray(x))return '['+x.map(canonical).join(',')+']';if(x&&typeof x==='object')return '{'+Object.keys(x).sort().map(k=>JSON.stringify(k)+':'+canonical(x[k])).join(',')+'}';return JSON.stringify(x);}
+export async function digest(x){const bytes=new TextEncoder().encode(typeof x==='string'?x:canonical(x));return 'sha256:'+Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',bytes)),b=>b.toString(16).padStart(2,'0')).join('');}
+export function parseCSV(input){let rows=[],row=[],cell='',quoted=false;for(let i=0;i<input.length;i++){const c=input[i];if(c==='"'){if(quoted&&input[i+1]==='"'){cell+='"';i++;}else if(!quoted&&cell!=='')throw Error('Invalid CSV quote');else quoted=!quoted;}else if(c===','&&!quoted){row.push(cell);cell='';}else if((c==='\n'||c==='\r')&&!quoted){if(c==='\r'&&input[i+1]==='\n')i++;row.push(cell);rows.push(row);row=[];cell='';}else cell+=c;}if(quoted)throw Error('Unclosed CSV field');if(cell||row.length){row.push(cell);rows.push(row);}const keys=rows.shift()||[];return rows.filter(r=>r.some(Boolean)).map(r=>{if(r.length!==keys.length)throw Error('CSV column count');return Object.fromEntries(keys.map((k,i)=>[k,r[i]]));});}
+// Kept exactly equivalent to the published extractor. Node tests compare both functions.
+export function decodeEntities(v){return v.replace(/&nbsp;|&#160;/gi,' ').replace(/&amp;/gi,'&').replace(/&quot;|&#34;/gi,'"').replace(/&#39;|&apos;/gi,"'").replace(/&lt;/gi,'<').replace(/&gt;/gi,'>');}
+export function plain(v=''){return decodeEntities(v.replace(/<[^>]*>/g,' ')).replace(/\s+/g,' ').trim();}
+export function similarity(a,b){const grams=v=>{const words=plain(v).toLocaleLowerCase().split(/[^\p{L}\p{N}]+/u).filter(Boolean);return new Set(words.length<2?words:words.slice(0,-1).map((w,i)=>`${w} ${words[i+1]}`));};const x=grams(a),y=grams(b);if(!x.size&&!y.size)return 1;let common=0;for(const v of x)if(y.has(v))common++;return common/(x.size+y.size-common);}
+export const metadataFieldsHash=row=>digest([row.title,row.description,row.h1,row.canonical].join('\n'));
+export const textLength=v=>[...v].length;
+export function csvCell(value){const s=String(value??'');const safe=/^[\s\u0000-\u001f]*[=+\-@]|^[\t\r\n]/u.test(s)?"'"+s:s;return '"'+safe.replaceAll('"','""')+'"';}

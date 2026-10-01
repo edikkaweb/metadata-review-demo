@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.edikka.com/docbd/data/automatisation-seo-ia-recommandations.schema.json",
+  "title": "Sortie contrôlée d'une automatisation SEO assistée par IA",
+  "description": "Contrat de sortie ouvert Edikka. Il structure une recommandation SEO et impose une validation humaine ; il ne garantit ni l'exactitude factuelle ni la performance SEO.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["target_url", "target_intent", "recommendations", "risks", "decision", "trace"],
+  "properties": {
+    "target_url": { "type": "string", "format": "uri", "maxLength": 2048 },
+    "target_intent": { "type": "string", "minLength": 3, "maxLength": 300 },
+    "recommendations": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 20,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["type", "proposal", "evidence", "confidence", "requires_human_validation"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["brief", "title", "meta_description", "internal_link", "content_gap", "cannibalization_risk"]
+          },
+          "proposal": { "type": "string", "minLength": 1, "maxLength": 1000 },
+          "evidence": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 10,
+            "items": { "type": "string", "minLength": 1, "maxLength": 1000 }
+          },
+          "confidence": { "type": "string", "enum": ["low", "medium", "high"] },
+          "requires_human_validation": { "const": true }
+        }
+      }
+    },
+    "risks": {
+      "type": "array",
+      "maxItems": 20,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["severity", "description", "source_urls"],
+        "properties": {
+          "severity": { "type": "string", "enum": ["critical", "major", "minor"] },
+          "description": { "type": "string", "minLength": 1, "maxLength": 1000 },
+          "source_urls": {
+            "type": "array",
+            "maxItems": 10,
+            "items": { "type": "string", "format": "uri" }
+          }
+        }
+      }
+    },
+    "decision": { "type": "string", "enum": ["draft", "human_review_required", "rejected"] },
+    "trace": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["model", "prompt_version", "input_hash", "generated_at"],
+      "properties": {
+        "model": { "type": "string", "minLength": 1, "maxLength": 200 },
+        "prompt_version": { "type": "string", "minLength": 1, "maxLength": 100 },
+        "input_hash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "generated_at": { "type": "string", "format": "date-time" }
+      }
+    }
+  },
+  "x-license": "https://creativecommons.org/licenses/by/4.0/",
+  "x-canonical-source": "https://www.edikka.com/insights/ia-automatisation-web/automatisation-seo-ia",
+  "x-version": "2026-08-19"
+}
