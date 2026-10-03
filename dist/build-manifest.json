@@ -18,8 +18,8 @@
     },
     {
       "path": "assets/render.mjs",
-      "bytes": 31486,
-      "sha256": "ac7011258d7a939dde00480551ec14fccd94d01a2efb91ec1afd374e00c354df"
+      "bytes": 33545,
+      "sha256": "bd9fc41a36c3e8a4ad20f1f4ea0c7d4a951c02f0e54fc520caf207f68c4f7d0c"
     },
     {
       "path": "assets/scenarios.mjs",
@@ -48,13 +48,13 @@
     },
     {
       "path": "index-en.html",
-      "bytes": 25865,
-      "sha256": "9436a44838651a13f9c0cf496bb1090fbc1d2728942c86c26d5b5be603d06c88"
+      "bytes": 28689,
+      "sha256": "d2e88ebc687770807b0bd74f85d00ae8e8dd918ad698006d2aab96cc0df81169"
     },
     {
       "path": "index.html",
-      "bytes": 27242,
-      "sha256": "742b89cc53362260c7aa5fafa31cb3edbb5c77407d44a2d6155e056d9b703a1c"
+      "bytes": 30058,
+      "sha256": "d77f25d98796b5c04df4a170dbb3d08b58eaa1e20b606d282266b73e18b7e358"
     },
     {
       "path": "originals/corpus-edikka-2026-09-22.csv",

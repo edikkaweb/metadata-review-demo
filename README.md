@@ -6,6 +6,8 @@ Examinez les sources, les contrôles et la décision éditoriale. Exemple initia
 
 Examine sources, checks and editorial decisions. The initial fictional case adds “free within 24 hours” to an audit offer without price or timing evidence. Removing these promises resolves their specific flags; it does not automatically approve the title.
 
+![Aperçu de la démonstration Edikka](docs/preview.jpg)
+
 ## Two separate spaces / Deux espaces distincts
 
 - Five editable fictional scenarios: unsupported promise, similar titles, protected metadata, changed evidence, and unchanged replay. Bilingual source variants, structured facts, expected initial outcomes and explanations are published in [data/scenarios.json](data/scenarios.json).
@@ -70,3 +72,7 @@ See [actual verification record](docs/TESTING.md), [reproduction](docs/REPRODUCT
 [Edikka kit and library](https://www.edikka.com/bibliotheque#instrument-metadata-review-kit) · [article FR](https://www.edikka.com/insights/ia-automatisation-web/automatiser-meta-title-description) · [article EN](https://www.edikka.com/en/insights/ai-web-automation/automating-meta-titles-descriptions).
 
 Original kit resources © Edikka, **CC BY 4.0**; preserve [original licence](originals/LICENSE.txt). The licence text still says 1.0.0; the manifest declares 1.0.2, and originals are not rewritten to conceal that difference. New demonstration code and fictional scenarios: **MIT**, see [LICENSE](LICENSE). Cite Bertrand Morel / Edikka for imported data, with kit version and access date from provenance.
+
+[Contribuer / Contributing](CONTRIBUTING.md) · [Toutes les démonstrations / All experiments](https://edikkaweb.github.io/)
+
+La détection automatique de GitHub peut afficher « Other » : le fichier LICENSE conserve les exclusions des archives, composants tiers et marques. Le code original reste sous MIT dans le périmètre indiqué. / GitHub may show “Other”; the existing licence scopes and exclusions remain authoritative.
